@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#B2DAF9"
+    android:background="@drawable/img_2"
     android:layout_margin="7dp">
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
+            android:layout_marginStart="15dp"
             android:src="@drawable/baseline_delete_forever_24"
             android:layout_marginEnd="14dp"/>
 
