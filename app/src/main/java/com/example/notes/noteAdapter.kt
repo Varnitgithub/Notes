@@ -18,6 +18,8 @@ class noteAdapter(private val context:Context, private val listener: noteInterfa
 
         val text: TextView = itemView.findViewById(R.id.textview)
         val deleteimage: ImageView = itemView.findViewById(R.id.deleteimage)
+        val hour:TextView = itemView.findViewById(R.id.hour)
+        val minutes:TextView = itemView.findViewById(R.id.minutes)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): noteViewHolder {
@@ -39,6 +41,8 @@ class noteAdapter(private val context:Context, private val listener: noteInterfa
     override fun onBindViewHolder(holder: noteViewHolder, position: Int) {
         val currentItem = noteItem[position]
         holder.text.text = currentItem.note
+        holder.hour.text = currentItem.hour
+        holder.minutes.text = currentItem.minutes
     }
 }
     interface noteInterface {

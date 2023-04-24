@@ -12,4 +12,6 @@ class noteRepository(private val noteDao: noteDao) {
     fun delete(notes: notes){
         noteDao.delete(notes)
     }
+
+
 }

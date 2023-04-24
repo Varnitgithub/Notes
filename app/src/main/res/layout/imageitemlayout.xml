@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/img_2"
-    android:layout_margin="2dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:background="@drawable/img_2">
+
     <LinearLayout
         android:id="@+id/LL1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        android:weightSum="4">
+        android:weightSum="4"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textview"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="This is my daily note"
-            android:padding="4dp"
-            android:textSize="20sp"
             android:layout_weight="3.7"
-            android:textColor="@color/white"/>
+            android:padding="4dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:text="This is my daily note" />
 
-        <ImageView
-            android:id="@+id/deleteimage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:src="@drawable/baseline_delete_forever_24" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/imagelayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="4sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/LL1">
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagelayout">
 
         <TextView
             android:id="@+id/hour"
@@ -49,9 +56,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="3.9"
             android:padding="1dp"
-
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="8sp"
             tools:ignore="TextSizeCheck"
             tools:text="23" />
 
@@ -61,9 +67,9 @@
             android:layout_weight="3.9"
             android:padding="1dp"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="8sp"
             tools:ignore="TextSizeCheck"
-            android:text=":"/>
+            tools:text=":" />
 
         <TextView
             android:id="@+id/minutes"
@@ -72,10 +78,20 @@
             android:layout_weight="3.9"
             android:padding="1dp"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="8sp"
             tools:ignore="TextSizeCheck"
             tools:text="23" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/deleteimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15sp"
+        android:src="@drawable/baseline_delete_forever_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
